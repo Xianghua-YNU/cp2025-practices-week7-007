@@ -41,7 +41,8 @@
 
 ### 问题1: 函数曲线 $\cos(\tan(\pi x))$ 绘制结果
 
-![alt text](Figure_1-1.png)
+![Figure_1](https://github.com/user-attachments/assets/f022d41f-ba25-446c-a13d-47d538057956)
+
 周期性震荡：
 
 tan(πx) 的周期为 1，导致 cos(tan(πx)) 在 x 轴上呈现周期性震荡。
@@ -60,7 +61,8 @@ SymPy 的 plot 函数会自动跳过无效区域，但靠近 x=±0.5 时仍会�
 
 ### 问题2: 隐函数曲线 $e^y + \frac{\cos x}{x} + y = 0$ 绘制结果
 
-![alt text](Figure_2-1.png)
+![Figure_2](https://github.com/user-attachments/assets/ac6ab86a-d744-4e3e-bd54-18a91d5722a0)
+
 定义域限制：
 
 x ≠ 0，绘图需分左右两段（如 x ∈ [-5, -0.1] 和 x ∈ [0.1, 5]）。
@@ -83,7 +85,8 @@ cos(x)/x 在 x > 0 时幅值较小且正，但 e^y + y > 0 对所有实数 y，�
 
 ### 问题3: 参数曲面绘制结果
 
-![alt text](Figure_3-1.png)
+![Figure_3](https://github.com/user-attachments/assets/68ccfb52-e816-409a-8ef2-4f38ec8c98ee)
+
 螺旋衰减结构：
 
 参数 s 的影响：exp(-s) 随 s 增大指数衰减，导致 x 和 y 的幅值逐渐缩小，形成向 z 轴收缩的螺旋。
@@ -105,8 +108,10 @@ cos(x)/x 在 x > 0 时幅值较小且正，但 e^y + y > 0 对所有实数 y，�
 ## 五、实验总结与讨论
 
 - 通过本实验你掌握了哪些绘图技巧？
+  
     掌握了画二维函数、隐函数和三维函数图像的方法
 - 实验中你遇到了哪些问题？如何解决？
+  
   函数使用格式不熟悉，上网查询得到
 - 你对SymPy的绘图功能有什么建议或意见？
 
