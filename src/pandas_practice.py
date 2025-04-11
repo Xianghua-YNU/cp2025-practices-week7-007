@@ -8,19 +8,17 @@ def creat_frame():
     """
     data = {
         '姓名': ['张三', '李四', '王五', '赵六', '陈七'],
-        '年龄': [25.0, 30.0, None, 22.0, 28.0],
+        '年龄': [25.0, 30.0, None, 22.0, 28.0],  # 保持浮点型以匹配原始数据
         '成绩': [85.5, 90.0, 78.5, 88.0, 92.0],
         '城市': ['北京', '上海', '广州', '深圳', '上海']
     }
     df = pd.DataFrame(data)
-    # 确保目录存在
-    os.makedirs('../data', exist_ok=True)
+    os.makedirs('../data', exist_ok=True)  # 确保目录存在
     df.to_csv('../data/data.csv', index=False, encoding='utf-8')
 
 def load_data():
     """任务1: 读取数据文件"""
-    df = pd.read_csv('../data/data.csv')
-    return df
+    return pd.read_csv('../data/data.csv')
 
 def show_basic_info(data):
     """任务2: 显示数据基本信息"""
@@ -35,6 +33,7 @@ def show_basic_info(data):
 
 def handle_missing_values(data):
     """任务3: 处理缺失值"""
+    # 仅处理年龄列的缺失值（原始数据中唯一有缺失的列）
     mean_age = data['年龄'].mean()
     data['年龄'] = data['年龄'].fillna(mean_age)
     print("\n=== 缺失值填充后的年龄列 ===")
